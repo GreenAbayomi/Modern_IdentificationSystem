@@ -1,12 +1,10 @@
-const QRCode = require('qrcode')
+const QRCode = require("qrcode");
 
-
-const encryptData = async(data)=>{
-   const encryptedData = await QRCode.toDataURL(data)
-   return encryptedData
-}
-
+const QRencrypt = async (data) => {
+  const encryptedData = await QRCode.toString(data);
+  return encryptedData;
+};
 
 module.exports = {
-    encryptData
-}
+    QRencrypt
+};
